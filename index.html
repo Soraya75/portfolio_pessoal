@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Soraya Pereira Gomes - Portfólio</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/styles.css" />
+  <link class="logo" rel="icon" href="./imagens/logozinha.png" />
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="./index.html">Portfólio Pessoal</a>
+    </div>
+    <div class="menu-icon" id="menuIcon">
+      <i class="fas fa-bars"></i>
+    </div>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Início</a>
+      <a href="./about.html">Sobre Mim</a>
+      <a href="./projects.html">Meus Projetos</a>
+      <a class="cta" href="./contact.html">Contato</a>
+    </div>
+  </nav>
+  <br><br>
+  <!-- Conteúdo Principal -->
+  <div class="container">
+    <div class="left-section">
+      <div class="content">
+        <p>WEB DESIGNER | PROGRAMADORA | CANVA | INGLÊS AVANÇADO</p>
+        <h1>Soraya Pereira Gomes</h1>
+        <p>
+          Olá, seja bem-vindo ao meu Portfólio! Eu tenho 18 anos e experiência
+          técnica nessas áreas acima.
+        </p>
+        <a class="btn" href="./about.html">Saiba Mais</a>
+      </div>
+    </div>
+    <div class="right-section">
+      <div class="photo-box">
+        <img src="./imagens/soraya.png" alt="Soraya" />
+      </div>
+      <div class="contact-info">
+        <p><strong>EMAIL</strong></p>
+        <p>sorayapereiragomes935@gmail.com</p>
+        <br />
+        <p><strong>TELEFONE</strong></p>
+        <p>(34)99882-2702</p>
+        <br />
+        <p><strong>SOCIAL MEDIA</strong></p>
+        <div class="social-media">
+          <a href="https://www.instagram.com/soraya7k?igsh=ZmZvdmN0bXVpcHEy">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/Soraya75">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>
+      &copy; 2025 Aplicação WEB Desenvolvido por Soraya. Todos os direitos
+      reservados.
+    </p>
+  </footer>
+
+  <!-- Script para o Menu Hamburguer -->
+  <script>
+    const menuIcon = document.getElementById("menuIcon");
+    const navLinks = document.getElementById("navLinks");
+
+    menuIcon.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,303 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-image: url(../imagens/fundo2.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+h1,
+p,
+a {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.lista-decorada {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+  display: inline-block;
+  text-align: left;
+}
+
+.lista-decorada li {
+  background: #a52a2a;
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 0.5em 1em;
+  margin: 0.5em 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.lista-decorada li:hover {
+  background-color: #ff0000e7;
+  transition: 0.5s;
+  color: #000000;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .logo a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.navbar .nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.navbar .nav-links a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: 700;
+}
+
+.navbar .cta {
+  background-color: #ffffff;
+  border: 2px solid #a52a2a;
+  padding: 10px 20px;
+  color: #a52a2a;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+.navbar .menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  margin-right: auto;
+  padding-left: 20px;
+}
+
+/* Container Principal */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+  padding: 20px;
+  min-height: calc(100vh - 80px);
+}
+
+/* Ajustes para as seções */
+.left-section,
+.right-section {
+  flex: 1;
+  padding: 20px;
+  max-width: 600px;
+}
+
+.left-section {
+  text-align: center;
+  border-radius: 300px;
+}
+
+.right-section {
+  background-color: #a52a2a;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 100px;
+  width: 640px;
+  height: 804.33px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Foto */
+.photo-box {
+  width: 300px;
+  height: 537.33px;
+  margin: 0 auto;
+}
+
+.photo-box img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Conteúdo */
+.content h1 {
+  font-size: 48px;
+  margin: 0;
+}
+
+.content p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.content .btn {
+  background-color: #a52a2a;
+  color: #ffffff;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: 700;
+  margin-top: 20px;
+  display: inline-block;
+  border-radius: 5px;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.content .btn:hover {
+  background-color: #ff0000e7;
+  color: #000000;
+}
+
+/* Informações de Contato */
+.contact-info {
+  width: 600px;
+  height: 207px;
+  margin-top: 20px;
+}
+
+.contact-info p {
+  margin: 5px 0;
+}
+
+.social-media {
+  display: flex;
+  margin-top: 20px;
+}
+
+.social-media a {
+  color: #ffffff;
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+/* Footer */
+footer {
+  background-color: #000000;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+  margin-top: auto;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  body {
+    background-image: url(../imagens/fundo2.png);
+  }
+
+  .navbar .logo {
+    margin-right: auto;
+  }
+
+  .navbar .menu-icon {
+    display: block;
+    order: -1;
+    margin-right: 0;
+    padding-right: 20px;
+  }
+
+  .navbar {
+    padding: 15px 20px;
+    flex-wrap: wrap;
+    position: relative; /* Adicionado para melhor posicionamento */
+  }
+
+  .navbar .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.98); /* Fundo levemente transparente */
+    position: absolute;
+    top: 100%; /* Gruda exatamente abaixo do header */
+    left: 0;
+    padding: 15px 0; /* Espaçamento interno */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 10px 10px; /* Bordas arredondadas apenas na parte inferior */
+    z-index: 999;
+    transition: all 0.3s ease; /* Suaviza a abertura/fechamento */
+    border-top: 1px solid rgba(0, 0, 0, 0.05); /* Linha sutil de separação */
+  }
+
+  .navbar .nav-links a {
+    padding: 12px 25px; /* Espaçamento maior para melhor toque */
+    color: #333; /* Cor mais suave */
+    transition: all 0.2s ease;
+    border-left: 3px solid transparent; /* Preparação para efeito hover */
+  }
+
+  .navbar .nav-links a:hover {
+    background-color: rgba(165, 42, 42, 0.05); /* Vermelho bem suave */
+    border-left: 3px solid #a52a2a; /* Borda lateral vermelha */
+    color: #a52a2a; /* Cor do texto ao passar mouse */
+  }
+
+  .navbar .nav-links .cta {
+    margin: 10px 25px 0; /* Espaçamento especial para o botão CTA */
+    text-align: center;
+    background-color: #a52a2a;
+    color: white;
+    border: none;
+  }
+
+  .navbar .nav-links .cta:hover {
+    background-color: #8c2323;
+    color: white;
+  }
+
+  .navbar .nav-links.active {
+    display: flex;
+  }
+
+   /* Ajuste específico para o footer no mobile */
+   footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    top: auto; /* Remove a posição top fixa */
+    margin-top: 0;
+  }
+
+  .container {
+    padding-bottom: 80px; /* Adiciona espaço para o footer não cobrir conteúdo */
+    flex-direction: column;
+  }
+
+  .photo-box {
+    max-width: 200px;
+  }
+
+  .right-section {
+    width: 100%;
+    height: auto;
+  }
+
+  .contact-info {
+    width: 100%;
+    height: auto;
+  }
+}
