@@ -1,0 +1,233 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-image: url(../imagens/fundo2.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+h1,
+p,
+a {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.lista-decorada {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+  display: inline-block;
+  text-align: center;
+}
+
+.lista-decorada li {
+  background: #a52a2a;
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 0.5em 1em;
+  margin: 0.5em 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.lista-decorada li:hover {
+  background-color: #ff0000e7;
+  transition: 0.5s;
+  color: #000000;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .logo a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.navbar .nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.navbar .nav-links a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: 700;
+}
+
+.navbar .cta {
+  background-color: #ffffff;
+  border: 2px solid #a52a2a;
+  padding: 10px 20px;
+  color: #a52a2a;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+.navbar .menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  margin-right: auto;
+  padding-left: 20px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 120px);
+  /* Altura da tela menos navbar e footer */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Container Principal */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  text-align: center;
+}
+
+/* Conteúdo */
+.content h1 {
+  font-size: 48px;
+  margin: 0;
+}
+
+.content p {
+  font-size: 18px;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.content .btn {
+  background-color: #a52a2a;
+  color: #ffffff;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: 700;
+  margin-top: 20px;
+  display: inline-block;
+  border-radius: 5px;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.content .btn:hover {
+  background-color: #ff0000e7;
+  color: #000000;
+}
+
+/* Footer */
+footer {
+  background-color: #000000;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .navbar .logo {
+    margin-right: auto;
+  }
+
+  .navbar .menu-icon {
+    display: block;
+    order: -1;
+    margin-right: 0;
+    padding-right: 20px;
+  }
+
+  .navbar {
+    padding: 15px 20px;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  .navbar .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.98);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 15px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 10px 10px;
+    z-index: 999;
+    transition: all 0.3s ease;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .navbar .nav-links a {
+    padding: 12px 25px;
+    color: #333;
+    transition: all 0.2s ease;
+    border-left: 3px solid transparent;
+  }
+
+  .navbar .nav-links a:hover {
+    background-color: rgba(165, 42, 42, 0.05);
+    border-left: 3px solid #a52a2a;
+    color: #a52a2a;
+  }
+
+  .navbar .nav-links .cta {
+    margin: 10px 25px 0;
+    text-align: center;
+    background-color: #a52a2a;
+    color: white;
+    border: none;
+  }
+
+  .navbar .nav-links .cta:hover {
+    background-color: #8c2323;
+    color: white;
+  }
+
+  .navbar .nav-links.active {
+    display: flex;
+  }
+
+  .container {
+    height: auto;
+    padding-top: 20px;
+  }
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    top: auto;
+    margin-top: 0;
+  }
+}
