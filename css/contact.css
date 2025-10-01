@@ -167,7 +167,8 @@ button:active {
     font-size: large;
   }
 
-  .input, button {
+  .input,
+  button {
     max-width: 600px;
   }
 }

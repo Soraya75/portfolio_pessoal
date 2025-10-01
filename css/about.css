@@ -1,5 +1,6 @@
 body,
 html {
+  height: 100%;
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
@@ -7,6 +8,7 @@ html {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  position: relative;
 }
 
 h1,
@@ -17,27 +19,31 @@ a {
   font-family: 'Roboto', sans-serif;
 }
 
-.lista-decorada {
-  list-style-type: none;
-  padding-left: 0;
-  margin: 0;
-  display: inline-block;
-  text-align: left;
-}
-
-.lista-decorada li {
-  background: #a52a2a;
+.btn-primary {
+  background-color: #a52a2a;
+  /* bordô principal */
   color: #ffffff;
-  border-radius: 5px;
-  padding: 0.5em 1em;
-  margin: 0.5em 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-bottom: 4px solid #8c2323;
+  /* tom mais escuro */
 }
 
-.lista-decorada li:hover {
-  background-color: #ff0000e7;
-  transition: 0.5s;
-  color: #000000;
+.btn-primary:hover {
+  filter: brightness(110%);
+  transform: translateY(-2px);
+  border-bottom: 6px solid #8c2323;
+}
+
+.btn-primary:active {
+  filter: brightness(90%);
+  transform: translateY(2px);
+  border-bottom: 2px solid #8c2323;
 }
 
 /* Navbar */
@@ -91,54 +97,24 @@ a {
   padding-left: 20px;
 }
 
+main {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 120px);
+  /* Altura da tela menos navbar e footer */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
 /* Container Principal */
 .container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  margin-top: 80px;
-  padding: 20px;
-  min-height: calc(100vh - 80px);
-}
-
-/* Ajustes para as seções */
-.left-section,
-.right-section {
-  flex: 1;
-  padding: 20px;
-  max-width: 600px;
-}
-
-.left-section {
-  text-align: center;
-  border-radius: 300px;
-}
-
-.right-section {
-  background-color: #a52a2a;
-  color: #ffffff;
-  text-align: center;
-  border-radius: 100px;
-  width: 640px;
-  height: 804.33px;
-  display: flex;
   flex-direction: column;
-  justify-content: space-between;
-}
-
-/* Foto */
-.photo-box {
-  width: 300px;
-  height: 537.33px;
-  margin: 0 auto;
-}
-
-.photo-box img {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  object-fit: cover;
+  align-items: center;
+  gap: 40px;
+  text-align: center;
 }
 
 /* Conteúdo */
@@ -150,45 +126,7 @@ a {
 .content p {
   font-size: 18px;
   margin: 10px 0;
-}
-
-.content .btn {
-  background-color: #a52a2a;
-  color: #ffffff;
-  padding: 10px 20px;
-  text-decoration: none;
-  font-weight: 700;
-  margin-top: 20px;
-  display: inline-block;
-  border-radius: 5px;
-  transition: background-color 0.5s ease, color 0.5s ease;
-}
-
-.content .btn:hover {
-  background-color: #ff0000e7;
-  color: #000000;
-}
-
-/* Informações de Contato */
-.contact-info {
-  width: 600px;
-  height: 207px;
-  margin-top: 20px;
-}
-
-.contact-info p {
-  margin: 5px 0;
-}
-
-.social-media {
-  display: flex;
-  margin-top: 20px;
-}
-
-.social-media a {
-  color: #ffffff;
-  margin-right: 10px;
-  font-size: 20px;
+  text-align: center;
 }
 
 /* Footer */
@@ -197,7 +135,6 @@ footer {
   text-align: center;
   padding: 20px 0;
   width: 100%;
-  margin-top: auto;
   color: white;
   position: fixed;
   bottom: 0;
@@ -206,10 +143,6 @@ footer {
 
 /* Responsividade */
 @media (max-width: 768px) {
-  body {
-    background-image: url(../imagens/fundo2.png);
-  }
-
   .navbar .logo {
     margin-right: auto;
   }
@@ -224,40 +157,40 @@ footer {
   .navbar {
     padding: 15px 20px;
     flex-wrap: wrap;
-    position: relative; /* Adicionado para melhor posicionamento */
+    position: relative;
   }
 
   .navbar .nav-links {
     display: none;
     flex-direction: column;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.98); /* Fundo levemente transparente */
+    background-color: rgba(255, 255, 255, 0.98);
     position: absolute;
-    top: 100%; /* Gruda exatamente abaixo do header */
+    top: 100%;
     left: 0;
-    padding: 15px 0; /* Espaçamento interno */
+    padding: 15px 0;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    border-radius: 0 0 10px 10px; /* Bordas arredondadas apenas na parte inferior */
+    border-radius: 0 0 10px 10px;
     z-index: 999;
-    transition: all 0.3s ease; /* Suaviza a abertura/fechamento */
-    border-top: 1px solid rgba(0, 0, 0, 0.05); /* Linha sutil de separação */
+    transition: all 0.3s ease;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
   }
 
   .navbar .nav-links a {
-    padding: 12px 25px; /* Espaçamento maior para melhor toque */
-    color: #333; /* Cor mais suave */
+    padding: 12px 25px;
+    color: #333;
     transition: all 0.2s ease;
-    border-left: 3px solid transparent; /* Preparação para efeito hover */
+    border-left: 3px solid transparent;
   }
 
   .navbar .nav-links a:hover {
-    background-color: rgba(165, 42, 42, 0.05); /* Vermelho bem suave */
-    border-left: 3px solid #a52a2a; /* Borda lateral vermelha */
-    color: #a52a2a; /* Cor do texto ao passar mouse */
+    background-color: rgba(165, 42, 42, 0.05);
+    border-left: 3px solid #a52a2a;
+    color: #a52a2a;
   }
 
   .navbar .nav-links .cta {
-    margin: 10px 25px 0; /* Espaçamento especial para o botão CTA */
+    margin: 10px 25px 0;
     text-align: center;
     background-color: #a52a2a;
     color: white;
@@ -273,31 +206,16 @@ footer {
     display: flex;
   }
 
-   /* Ajuste específico para o footer no mobile */
-   footer {
+  .container {
+    height: auto;
+    padding-top: 20px;
+  }
+
+  footer {
     position: fixed;
     bottom: 0;
     left: 0;
-    top: auto; /* Remove a posição top fixa */
+    top: auto;
     margin-top: 0;
-  }
-
-  .container {
-    padding-bottom: 80px; /* Adiciona espaço para o footer não cobrir conteúdo */
-    flex-direction: column;
-  }
-
-  .photo-box {
-    max-width: 200px;
-  }
-
-  .right-section {
-    width: 100%;
-    height: auto;
-  }
-
-  .contact-info {
-    width: 100%;
-    height: auto;
   }
 }

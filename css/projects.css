@@ -138,12 +138,14 @@ footer {
     position: fixed;
     bottom: 0;
     left: 0;
-    z-index: 1000; /* Garante que fique acima de outros elementos */
+    z-index: 1000;
+    /* Garante que fique acima de outros elementos */
 }
 
 @media (max-width: 768px) {
     .levic {
-        border-radius: 0 !important; /* Remove completamente o border-radius no mobile */
+        border-radius: 0 !important;
+        /* Remove completamente o border-radius no mobile */
     }
 
     .navbar {
@@ -208,13 +210,15 @@ footer {
         display: flex;
     }
 
- /* Ajustes específicos para o footer no mobile */
- footer {
-    padding: 20px 0; /* Reduz um pouco o padding */
-}
+    /* Ajustes específicos para o footer no mobile */
+    footer {
+        padding: 20px 0;
+        /* Reduz um pouco o padding */
+    }
 
-.projects-container {
-    padding-bottom: 70px; /* Adiciona espaço para o footer não cobrir conteúdo */
+    .projects-container {
+        padding-bottom: 70px;
+        /* Adiciona espaço para o footer não cobrir conteúdo */
         padding: 80px 15px;
         gap: 15px;
     }
@@ -262,7 +266,8 @@ footer {
     }
 
     .projects-container {
-        padding-bottom: 60px; /* Ajuste fino para telas muito pequenas */
+        padding-bottom: 60px;
+        /* Ajuste fino para telas muito pequenas */
     }
 
     .project-box {
