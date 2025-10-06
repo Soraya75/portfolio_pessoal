@@ -179,11 +179,6 @@ button:active {
     background-image: url(../imagens/fundo_contato.png);
   }
 
-  .navbar {
-    justify-content: space-between;
-    padding: 15px 20px;
-  }
-
   .navbar .logo {
     margin-right: auto;
   }
@@ -195,6 +190,12 @@ button:active {
     padding-right: 20px;
   }
 
+  .navbar {
+    padding: 15px 20px;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
   .navbar .nav-links {
     display: none;
     flex-direction: column;
@@ -203,7 +204,7 @@ button:active {
     position: absolute;
     top: 100%;
     left: 0;
-    padding: 0;
+    padding: 15px 0;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     border-radius: 0 0 10px 10px;
     z-index: 999;

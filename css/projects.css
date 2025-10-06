@@ -144,13 +144,7 @@ footer {
 
 @media (max-width: 768px) {
     .levic {
-        border-radius: 0 !important;
-        /* Remove completamente o border-radius no mobile */
-    }
-
-    .navbar {
-        justify-content: space-between;
-        padding: 15px 20px;
+        border-radius: 150px;
     }
 
     .navbar .logo {
@@ -162,6 +156,12 @@ footer {
         order: -1;
         margin-right: 0;
         padding-right: 20px;
+    }
+
+    .navbar {
+        padding: 15px 20px;
+        flex-wrap: wrap;
+        position: relative;
     }
 
     .navbar .nav-links {
@@ -210,12 +210,6 @@ footer {
         display: flex;
     }
 
-    /* Ajustes específicos para o footer no mobile */
-    footer {
-        padding: 20px 0;
-        /* Reduz um pouco o padding */
-    }
-
     .projects-container {
         padding-bottom: 70px;
         /* Adiciona espaço para o footer não cobrir conteúdo */
@@ -260,11 +254,6 @@ footer {
 }
 
 @media (max-width: 480px) {
-    footer {
-        padding: 12px 0;
-        font-size: 13px;
-    }
-
     .projects-container {
         padding-bottom: 60px;
         /* Ajuste fino para telas muito pequenas */
@@ -276,6 +265,6 @@ footer {
     }
 
     .levic {
-        border-radius: 0 !important;
+        border-radius: 150px;
     }
 }
